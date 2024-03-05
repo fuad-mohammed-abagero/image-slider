@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+}
+.div1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.img-dev {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.img-dev img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+  flex-grow: 0;
+  transition: translate 300ms ease-in-out;
+}
+.cercle {
+  position: absolute;
+  bottom: 2%;
+
+  width: fit-content;
+  z-index: 2;
+  display: flex;
+}
+.cercle > *:hover .cercle > *:focus-visible {
+  scale: 1.2;
+}
+.selected-cercle-span {
+  background-color: rgb(10, 10, 10);
+}
+.selected-cercle-span,
+.cercle-span {
+  margin: 3px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: solid 2px #000;
+  transition: background-color 300ms ease-in-out;
+}
+.cercle-span {
+  background-color: transparent;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  background-color: transparent;
+  top: 0;
+  bottom: 0;
+  border: none;
+  width: fit-content;
+  position: absolute;
+  padding: 0;
+}
+.prev {
+  left: 0%;
+}
+.next {
+  animation: toleft 300ml ease-in-out;
+  right: 0%;
+}
+
+.prev:hover,
+.prev:focus-visible {
+  background-color: #00000088;
+}
+.next:hover,
+.next:focus-visible {
+  background-color: #00000088;
+}
+.prev:focus-visible,
+.next:focus-visible,
+.cercle > *:focus-visible {
+  outline: auto;
+}
